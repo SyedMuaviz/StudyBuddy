@@ -33,7 +33,7 @@ const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 // ─── Provider ────────────────────────────────────────────────────────────────
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUserState] = useState<AppUser | null>(null);
-  const [isLoading, setLoadingState] = useState(true); // true while Firebase restores session
+  const [isLoading, setLoadingState] = useState(false); // false until Phase 2 connects Firebase auth listener
 
   const setUser = useCallback((u: AppUser | null) => setUserState(u), []);
   const setLoading = useCallback((v: boolean) => setLoadingState(v), []);
