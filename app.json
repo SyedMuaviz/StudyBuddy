@@ -21,7 +21,7 @@
     "android": {
       "package": "com.studybuddy.app",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundColor": "#6366F1"
       },
       "permissions": [
@@ -42,11 +42,6 @@
           "sounds": []
         }
       ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
-      }
-    }
+    ]
   }
 }
