@@ -42,5 +42,5 @@ export const STORAGE_KEYS = {
   STREAK: '@studybuddy/streak',
   FAVORITES: '@studybuddy/favorites',
   SETTINGS: '@studybuddy/settings',
-  THEME: '@studybuddy/theme',        // also used by ThemeContext
+  THEME: '@studybuddy/theme', // also used by ThemeContext
 } as const;

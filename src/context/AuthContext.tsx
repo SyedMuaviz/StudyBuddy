@@ -10,13 +10,7 @@
  * placeholder types so navigation and all screens can be built first.
  */
 
-import React, {
-  createContext,
-  useContext,
-  useMemo,
-  useState,
-  useCallback,
-} from 'react';
+import { createContext, useContext, useMemo, useState, useCallback, type ReactNode } from 'react';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 export interface AppUser {
@@ -37,7 +31,7 @@ interface AuthContextValue {
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
 // ─── Provider ────────────────────────────────────────────────────────────────
-export function AuthProvider({ children }: { children: React.ReactNode }) {
+export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUserState] = useState<AppUser | null>(null);
   const [isLoading, setLoadingState] = useState(true); // true while Firebase restores session
 

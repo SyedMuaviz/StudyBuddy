@@ -7,7 +7,6 @@
  * Every real screen will replace this component in later phases.
  */
 
-import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useTheme } from '../context/ThemeContext';
 import { fontSize, spacing } from '../theme';

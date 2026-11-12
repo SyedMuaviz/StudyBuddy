@@ -7,13 +7,14 @@
  * We also respect the device's system preference as the initial default.
  */
 
-import React, {
+import {
   createContext,
   useCallback,
   useContext,
   useEffect,
   useMemo,
   useState,
+  type ReactNode,
 } from 'react';
 import { useColorScheme } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -36,7 +37,7 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 // ─── Provider ────────────────────────────────────────────────────────────────
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export function ThemeProvider({ children }: { children: ReactNode }) {
   const systemScheme = useColorScheme(); // 'light' | 'dark' | null
   const [mode, setMode] = useState<ThemeMode>(systemScheme === 'dark' ? 'dark' : 'light');
 

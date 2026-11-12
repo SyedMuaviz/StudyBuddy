@@ -13,12 +13,12 @@ export interface Task {
   title: string;
   subject: string;
   priority: Priority;
-  dueDate: string | null;    // ISO 8601 date string, null if no due date
-  dueTime: string | null;    // "HH:MM" format, null if no specific time
+  dueDate: string | null; // ISO 8601 date string, null if no due date
+  dueTime: string | null; // "HH:MM" format, null if no specific time
   isCompleted: boolean;
   reminderEnabled: boolean;
   notificationId: string | null; // expo-notifications identifier
-  createdAt: string;         // ISO 8601
+  createdAt: string; // ISO 8601
 }
 
 // ─── Focus Session ───────────────────────────────────────────────────────────
@@ -26,16 +26,16 @@ export type TimerMode = 'focus' | 'shortBreak' | 'longBreak';
 
 export interface FocusSession {
   id: string;
-  date: string;         // "YYYY-MM-DD"
+  date: string; // "YYYY-MM-DD"
   durationMinutes: number;
-  completedAt: string;  // ISO 8601
+  completedAt: string; // ISO 8601
 }
 
 // ─── Streak ──────────────────────────────────────────────────────────────────
 export interface StreakData {
-  currentStreak: number;  // consecutive study days
+  currentStreak: number; // consecutive study days
   longestStreak: number;
-  lastStudyDate: string | null;  // "YYYY-MM-DD"
+  lastStudyDate: string | null; // "YYYY-MM-DD"
   totalSessions: number;
   totalMinutes: number;
 }
@@ -69,17 +69,17 @@ export interface DictionaryEntry {
 export interface FavoriteWord {
   id: string;
   word: string;
-  partOfSpeech: string;   // first meaning's part of speech
-  definition: string;     // first definition
-  savedAt: string;        // ISO 8601
+  partOfSpeech: string; // first meaning's part of speech
+  definition: string; // first definition
+  savedAt: string; // ISO 8601
 }
 
 // ─── Settings ────────────────────────────────────────────────────────────────
 export interface AppSettings {
-  focusDurationMinutes: number;     // default 25
-  shortBreakMinutes: number;        // default 5
-  longBreakMinutes: number;         // default 15
-  sessionsBeforeLongBreak: number;  // default 4
+  focusDurationMinutes: number; // default 25
+  shortBreakMinutes: number; // default 5
+  longBreakMinutes: number; // default 15
+  sessionsBeforeLongBreak: number; // default 4
   notificationsEnabled: boolean;
   soundEnabled: boolean;
 }

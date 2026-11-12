@@ -5,7 +5,6 @@
  * (e.g. ForgotPassword) without touching the main app navigation.
  */
 
-import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import LoginScreen from '../screens/auth/LoginScreen';

@@ -21,6 +21,8 @@ export const dictionaryClient = axios.create({ baseURL: BASE_URL, timeout: 10_00
  * Throws if the word is not found (API returns 404).
  */
 export async function lookupWord(word: string): Promise<DictionaryEntry[]> {
-  const { data } = await dictionaryClient.get<DictionaryEntry[]>(`/${encodeURIComponent(word.trim())}`);
+  const { data } = await dictionaryClient.get<DictionaryEntry[]>(
+    `/${encodeURIComponent(word.trim())}`,
+  );
   return data;
 }

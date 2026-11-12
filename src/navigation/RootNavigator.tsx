@@ -9,7 +9,6 @@
  * NavigationContainer must wrap everything — it manages the navigation state.
  */
 
-import React from 'react';
 import { ActivityIndicator, View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';

@@ -41,7 +41,7 @@ export const palette = {
 } as const;
 
 /** Light-mode semantic tokens */
-export const lightColors = {
+export const lightColors: AppColors = {
   primary: palette.indigo500,
   primaryDark: palette.indigo700,
   primaryLight: palette.indigo100,
@@ -68,7 +68,7 @@ export const lightColors = {
 } as const;
 
 /** Dark-mode semantic tokens (same keys, different values) */
-export const darkColors: typeof lightColors = {
+export const darkColors: AppColors = {
   primary: palette.indigo400,
   primaryDark: palette.indigo600,
   primaryLight: palette.indigo700,
@@ -94,4 +94,25 @@ export const darkColors: typeof lightColors = {
   tabBarInactive: palette.gray500,
 };
 
-export type AppColors = typeof lightColors;
+// Use an explicit interface so dark-mode values (different hex strings) can satisfy the type
+export interface AppColors {
+  primary: string;
+  primaryDark: string;
+  primaryLight: string;
+  accent: string;
+  background: string;
+  surface: string;
+  surfaceSecondary: string;
+  border: string;
+  textPrimary: string;
+  textSecondary: string;
+  textDisabled: string;
+  textOnPrimary: string;
+  success: string;
+  error: string;
+  warning: string;
+  tabBar: string;
+  tabBarBorder: string;
+  tabBarActive: string;
+  tabBarInactive: string;
+}
