@@ -1,0 +1,45 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# .gitignore — StudyBuddy
+# Standard Expo / React Native / Node ignores
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Dependency directories
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native build output (not generated in Expo managed workflow,
+# but included for safety if someone ejects)
+ios/
+android/
+
+# Environment variables — NEVER commit secrets
+.env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# IDE / Editor
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo
+
+# Jest
+coverage/
+
+# EAS
+.easignore
